@@ -1,0 +1,12 @@
+[project]
+name = "agentcmc"
+
+[tool.poetry]
+version = "1.0"  # base version
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uagents = { version = "^0.21.0", python = ">=3.10,<3.13" }
+requests = "^2.13.0"
+python-dotenv = "^0.20.0"
+uagents-ai-engine = { version = "^0.9.0", python = ">=3.10,<3.13" }
