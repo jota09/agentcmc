@@ -1,22 +1,13 @@
-import json
 import os
 
-from cosmpy.aerial.wallet import LocalWallet
+#from cosmpy.aerial.wallet import LocalWallet
 from cosmpy.aerial.client import LedgerClient, NetworkConfig
 from uagents import Agent, Context
 from uagents.setup import fund_agent_if_low
 from dotenv import load_dotenv
 
-
-from coinmarketcap import get_share_price
-from chat_proto import chat_proto
-from testing_deltav_1 import coinmarketcap_protocol
-from health_checker import health_protocol
-
-
 # You can define your COINMARKETCAP_API_KEY value as a secret or environment variable
 load_dotenv()
-SEED_PHRASE_AGENT = os.environ.get("SEED_PHRASE_AGENT","YOUR_SEED_PHRASE_AGENT")
 SEED_PHRASE_WALLET = os.environ.get("SEED_PHRASE_WALLET","YOUR_SEED_PHRASE_WALLET")
 
 # Recovering an existing private key
@@ -25,10 +16,10 @@ SEED_PHRASE_WALLET = os.environ.get("SEED_PHRASE_WALLET","YOUR_SEED_PHRASE_WALLE
 #print(my_wallet.address()) will print the address for the wallet
 
 agent = Agent(
-    name="Bruno",
+    name="Default",
     port=8000,
 #    wallet=my_wallet,
-    seed=SEED_PHRASE_AGENT,
+    seed="DefaultSeedPhrase",
     endpoint=["http://127.0.0.1:8000/submit","http://127.0.0.1:8001/submit"]
 )
 
