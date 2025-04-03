@@ -3,6 +3,7 @@ import requests
 import json
 from dotenv import load_dotenv
 
+load_dotenv()
 LLM_MODEL = os.environ.get("LLM_MODEL","YOUR_LLM_MODEL")
 LLM_API_KEY = os.environ.get("LLM_API_KEY","YOUR_LLM_API_KEY")
 LLM_ENDPOINT = os.environ.get("LLM_ENDPOINT","YOUR_LLM_URL")
