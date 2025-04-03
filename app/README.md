@@ -23,13 +23,24 @@ The CoinMarketCap Agent uses the CoinMarketCap API to search for and retrieve in
 
 This agent retrieves the current prices of cryptocurrencies from CoinMarketCap based on a specified currency symbol. By providing a currency symbol, such as "bitcoin" or "ethereum," users can access up-to-date pricing information for their chosen cryptocurrency. This functionality is crucial for individuals and businesses seeking to monitor market trends, make informed investment decisions, or analyze the performance of various cryptocurrencies.
 
-Input Data Model
+Input Data Model For DeltaV
 
 ```
-class CoinMarketCapPriceTrackerRequest(Model):
+class TestingCMCPriceTrackerRequest(Model):
     symbol: str = Field(description="The symbol of the currency, for example: fetch, bitcoin, ethereum, etc.")
 
     class Config:
         allow_population_by_field_name = True
+
+```
+
+Input Data Model For AgentCmc
+
+```
+class RequestMessage(Model):
+    text: str
+ 
+class ResponseMessage(Model):
+    text: str
 
 ```
