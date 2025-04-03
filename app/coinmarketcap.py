@@ -36,7 +36,7 @@ async def get_share_price(symbol: str):
     try:
         first_key = next(iter(data["data"]))
         price = round(data["data"][first_key]["quote"]["USD"]["price"],3)
-        message = f"The current share price of {symbol} is {price} USD"
+        message = f"The current price of {symbol} is {price} USD"
     except:
         message = f"Failed to retrieve share price for {symbol}"
     return message

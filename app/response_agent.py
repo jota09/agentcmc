@@ -19,9 +19,10 @@ class ResponseMessage(Model):
     
 bruno_agent = Agent(
     name="Bruno",
-    port=8001,
+    port=8000,
     seed=SEED_PHRASE_AGENT,
-    endpoint=["http://127.0.0.1:8001/submit","http://127.0.0.1:8002/submit"]
+    endpoint=["http://localhost:8000/submit","http://localhost:8001/submit"],
+    readme_path="README.md"
 )
 
 fund_agent_if_low(bruno_agent.wallet.address())

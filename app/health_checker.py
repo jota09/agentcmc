@@ -38,4 +38,4 @@ async def handle_health_check(ctx: Context, sender: str, msg: HealthCheck):
     except Exception as err:
         ctx.logger.error(err)
     finally:
-        await ctx.send(sender, AgentHealth(agent_name=AGENT_NAME, status=status))
+        await ctx.send(sender, AgentHealth(agent_name="Bruno", status=status))
