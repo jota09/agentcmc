@@ -175,4 +175,4 @@ cython_debug/
 
 #Mac hidden files
 .DS_Store
-/app/.DS_Store
+app/.DS_Store
